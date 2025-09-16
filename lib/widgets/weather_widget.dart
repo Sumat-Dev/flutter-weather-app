@@ -93,7 +93,6 @@ class _WeatherWidgetState extends State<WeatherWidget> {
 
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
-        debugPrint('Sumat => $data');
         if (data['error'] != null) {
           throw Exception(
             data['error']['message'] ?? 'Failed to fetch weather data',
